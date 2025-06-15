@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![image](https://github.com/user-attachments/assets/03f5125d-fdc3-442c-8c86-f4a2aaf45e98)Cloudinary Media Hub
 
-## Getting Started
+Cloudinary Media Hub is a full-stack SaaS platform that allows users to upload, manage, and interact with their media content—images and videos—using Cloudinary as the storage and transformation engine. Built with Next.js, Prisma, NeonDB, Cloudinary, and styled using DaisyUI, this platform provides a seamless user experience for media management.
 
-First, run the development server:
+✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📷 Image Upload and Management
+- Upload images directly to Cloudinary
+- Automatically resize images during upload
+- View uploaded images on a dedicated "Uploaded Images" page
+- Download any image
+- Delete uploaded images
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎥 Video Upload and Management
+- Upload videos with title and description
+- Backend video compression for optimized storage
+- Watch video preview on hover
+- Click to open videos in a separate tab for full viewing
+- View all uploaded videos on "Uploaded Videos" page
+- Delete videos when no longer needed
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Framework: [Next.js](https://nextjs.org)
+- Database: [NeonDB](https://neon.tech)
+- ORM: [Prisma](https://www.prisma.io/)
+- Cloud Storage: [Cloudinary](https://cloudinary.com)
+- UI Components: [DaisyUI](https://daisyui.com)
 
-## Learn More
+📂 Folder Structure (Simplified)
+/pages
+/api → API routes for uploads, deletions, etc.
+/images → Uploaded images page
+/videos → Uploaded videos page
+/components → Reusable UI components
+/lib → Cloudinary and Prisma helpers
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the Repository
+bash
+git clone https://github.com/yourusername/cloudinary-media-hub.git
 
-## Deploy on Vercel
+2.Install Dependencies
+npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3.Set Environment Variables
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
+CLERK_SECRET_KEY=""
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=""
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=""
+
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=""
+NEXT_PUBLIC_CLOUDINARY_API_KEY=""
+NEXT_PUBLIC_CLOUDINARY_API_SECRET=""
+
+DATABASE_URL=""
+
+4. Push Prisma Schema
+ npx prisma db push
+
+5. Run Development Server
+  npm run dev
+
