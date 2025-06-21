@@ -18,7 +18,7 @@ export default function Home() {
               Easily upload videos and images, preview them instantly, track file details, resize images using AI, and manage your media effortlessly — all powered by Cloudinary and built with Next.js, Prisma, and Clerk.
             </p>
             <Link href="/home">
-            <button className="btn btn-success rounded-2xl w-md text-lg text-black">Upload Things</button>
+            <button className="btn btn-success rounded-2xl w-md text-lg text-black animate-bounce">Upload Things</button>
             </Link>
           </div>
         </div>
